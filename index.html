@@ -1,92 +1,299 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educational Video Learning Portal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <style>
-        body{
-            font-family: Arial, sans-serif;
-            margin:0;
-            background:#f2f5f9;
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #3498db;
+            --bg: #f4f7f6;
+            --text: #333;
+            --white: #ffffff;
         }
-        header{
-            background:#0d47a1;
-            color:white;
-            text-align:center;
-            padding:30px;
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
         }
-        header img{
-            width:90px;
+
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-        section{
-            background:white;
-            margin:30px;
-            padding:20px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
+
+        header img {
+            width: 80px;
+            margin-bottom: 15px;
         }
-        h2{
-            background:#1565c0;
-            color:white;
-            padding:10px;
-            border-radius:5px;
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
         }
-        h3{
-            color:#0d47a1;
+
+        nav {
+            background: var(--secondary);
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        a{
-            color:#1565c0;
-            font-weight:bold;
-            text-decoration:none;
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9em;
         }
-        a:hover{
-            text-decoration:underline;
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
-        footer{
-            text-align:center;
-            padding:15px;
-            background:#0d47a1;
-            color:white;
+
+        .section-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 10px;
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            background: #eef2f3;
+            padding: 10px 15px;
+            border-left: 5px solid var(--accent);
+            color: var(--secondary);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        tr:nth-child(even) { background-color: #f9f9f9; }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.85em;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--primary);
+            color: white;
+            margin-top: 50px;
         }
     </style>
 </head>
-
 <body>
 
 <header>
-    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png">
+    <img src="https://img.icons8.com/ios-filled/100/ffffff/graduation-cap.png" alt="Graduation Cap">
     <h1>Educational Video Learning Portal</h1>
-    <p>B.Com Semester 6 – Unit Wise YouTube Learning</p>
+    <p>B.Com Semester 6 - Comprehensive Learning Resources</p>
 </header>
 
-<section>
-<h2>B.Com General</h2>
+<nav>
+    <a href="#general">B.Com General</a>
+    <a href="#honors">B.Com Honors</a>
+    <a href="#computer">B.Com Computer Applications</a>
+</nav>
 
-<h3>English – English By Nisa</h3>
-<a href="https://youtube.com/playlist?list=Plujxb7al70ibdke4oii4d40mycuq4jnq8" target="_blank">Watch Playlist</a>
+<div class="container">
 
-<h3>Telugu – Shivanipallela</h3>
-<a href="https://youtu.be/Acxwzelmptk" target="_blank">Watch Videos</a>
+    <section id="general" class="section-card">
+        <h2>B.Com (General) - Syllabus Sem 6</h2>
+        
+        <h3>Subject: English</h3>
+        <table>
+            <tr>
+                <th>Unit / Topic</th>
+                <th>Channel Name</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Poetry, Prose & Critical Reading (Units 1-3)</td>
+                <td>English By Nisa</td>
+                <td><a href="https://youtube.com/playlist?list=Plujxb7al70ibdke4oii4d40mycuq4jnq8" class="btn" target="_blank">View Playlist</a></td>
+            </tr>
+            <tr>
+                <td>Grammar Part A (Framing Questions, Writing)</td>
+                <td>English By Nisa</td>
+                <td><a href="https://youtube.com/playlist?list=Plujxb7al70ib4mdwqipyrirrylnwjpu2d" class="btn" target="_blank">View Playlist</a></td>
+            </tr>
+            <tr>
+                <td>Units 1 to 3 Full Coverage</td>
+                <td>Danduvenkataramulu</td>
+                <td><a href="https://youtube.com/playlist?list=Plyjvm5gfnmy6rkpqkph7psuaobb44shws" class="btn" target="_blank">View Playlist</a></td>
+            </tr>
+        </table>
 
-<h3>CCMA</h3>
-<a href="https://youtu.be/6f6fs-Sc5ek" target="_blank">Watch Unit</a>
+        <h3>Subject: Telugu / Hindi / Sanskrit</h3>
+        <table>
+            <tr>
+                <th>Language</th>
+                <th>Units</th>
+                <th>Channel</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Telugu</td>
+                <td>Unit 1-5</td>
+                <td>Danduvenkatramulu</td>
+                <td><a href="https://youtube.com/playlist?list=Plyjvm5gfnmy6uua5iln-Gqnpkw7y1cemh" class="btn" target="_blank">Watch</a></td>
+            </tr>
+            <tr>
+                <td>Hindi</td>
+                <td>Unit 1-5</td>
+                <td>Disha Hindi Classes</td>
+                <td><a href="https://youtube.com/playlist?list=Plstbuofp6ehdnt2reau2eaprgmdw6bzra" class="btn" target="_blank">Watch</a></td>
+            </tr>
+            <tr>
+                <td>Sanskrit</td>
+                <td>Unit 1-5</td>
+                <td>Dandu Education</td>
+                <td><a href="https://youtube.com/playlist?list=Plyjvm5gfnmy7ynznz0neh3lcgai1obzhh" class="btn" target="_blank">Watch</a></td>
+            </tr>
+        </table>
 
-<h3>GST</h3>
-<a href="https://youtu.be/Vvhl0u-Knky" target="_blank">Watch Unit</a>
+        <h3>Subject: Cost Control & Management Accounting (CCMA)</h3>
+        <table>
+            <tr>
+                <th>Unit</th>
+                <th>Topic</th>
+                <th>Link (ShivaniPallela)</th>
+            </tr>
+            <tr>
+                <td>Unit 1</td>
+                <td>Marginal Costing</td>
+                <td><a href="https://youtu.be/6f6fs-Sc5ek" class="btn" target="_blank">Watch Video</a></td>
+            </tr>
+            <tr>
+                <td>Unit 2</td>
+                <td>Budgetary Control</td>
+                <td><a href="https://youtu.be/G5enui34k_S" class="btn" target="_blank">Watch Video</a></td>
+            </tr>
+            <tr>
+                <td>Full Course</td>
+                <td>Playlist</td>
+                <td><a href="https://youtube.com/playlist?list=Plwjdzvupkxallmgp19jfhnenudgoy1g2v" class="btn" target="_blank">Hasham Ali Khan</a></td>
+            </tr>
+        </table>
+    </section>
 
-<h3>Accounting Standards</h3>
-<a href="https://youtube.com/playlist?list=Plwjdzvupkxamai6cfalfypqvvqfhxzxc6" target="_blank">Watch Playlist</a>
+    <section id="honors" class="section-card">
+        <h2>B.Com Honors - Syllabus Sem 6</h2>
+        
+        <h3>Subject: International Finance</h3>
+        <table>
+            <tr>
+                <th>Unit</th>
+                <th>Resource</th>
+                <th>Channel</th>
+            </tr>
+            <tr>
+                <td>Unit 1 & 2</td>
+                <td><a href="https://youtu.be/U8CIwSjyARU" class="btn" target="_blank">Introduction & IMS</a></td>
+                <td>ShivaniPallela</td>
+            </tr>
+            <tr>
+                <td>Unit 3</td>
+                <td><a href="https://youtu.be/yiG9wkTbdmM" class="btn" target="_blank">Forex System</a></td>
+                <td>Hasham Ali Khan</td>
+            </tr>
+        </table>
 
-<h3>Research Methodology</h3>
-<a href="https://youtu.be/Ksvm8lo3jik" target="_blank">Watch</a>
-</section>
+        <h3>Subject: Accounting Standards</h3>
+        <ul>
+            <li><strong>Unit 1 & 2:</strong> <a href="https://youtube.com/playlist?list=Plwjdzvupkxamai6cfalfypqvvqfhxzxc6">Hasham Ali Khan Playlist</a></li>
+            <li><strong>Unit 4: Business Acquisition:</strong> <a href="https://youtu.be/Eerto0vzu6a">Lecture 1</a> | <a href="https://youtu.be/Hkqs0jw4wt4">Lecture 2</a></li>
+            <li><strong>Unit 5: Financial Reporting:</strong> <a href="https://youtu.be/Dtdberzz1ks">ShivaniPallela Revision</a></li>
+        </ul>
+    </section>
 
-<section>
-<h2>B.Com Honors</h2>
-<h3>International Finance</h3>
-<a href="https://youtu.be/U8CIwSjyARU" target="_blank">Watch</a>
-</section>
+    <section id="computer" class="section-card">
+        <h2>B.Com (Computer Applications) - Sem 6</h2>
+        
+        <h3>Subject: Cybersecurity</h3>
+        <div style="background: #fcf8e3; padding: 20px; border-radius: 5px; border: 1px solid #faebcc;">
+            <p><strong>Full Course Playlist:</strong> <a href="https://youtube.com/playlist?list=PLtfg0YD2YYUQMZp4bRkeZI0JXWHGqh8vo">ShivaniPallela Cybersecurity</a></p>
+            <p><strong>One Shot Video:</strong> <a href="https://youtu.be/dgQ35EpLh_Q">Watch All-in-One</a></p>
+            <p><strong>Important Questions:</strong> <a href="https://youtu.be/u8afErfnabU">Get Exam Questions</a></p>
+        </div>
+    </section>
 
-<sect
+    <section class="section-card">
+        <h2>Research Methodology & Project</h2>
+        <table>
+            <tr>
+                <th>Topic</th>
+                <th>Link</th>
+                <th>Channel</th>
+            </tr>
+            <tr>
+                <td>Hypothesis Testing</td>
+                <td><a href="https://youtube.com/playlist?list=Pllhsiffdzcuwrlgixmkd1rnelsz1you4o" class="btn" target="_blank">View Playlist</a></td>
+                <td>Devika's Commerce</td>
+            </tr>
+            <tr>
+                <td>Whole Subject Explanation</td>
+                <td><a href="https://youtu.be/Pkmmbcs4tey" class="btn" target="_blank">Full Video</a></td>
+                <td>ShivaniPallela</td>
+            </tr>
+        </table>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Educational Video Learning Portal | Dedicated to Academic Excellence</p>
+</footer>
+
+</body>
+</html>
