@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BCom Study Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>B.Com Study YouTube Portal</h1>
+
+<div id="groups"></div>
+<div id="subjects"></div>
+<div id="channels"></div>
+<div id="links"></div>
+
+<script src="data.js"></script>
+<script>
+function showSubjects(group){
+    document.getElementById('subjects').innerHTML = "";
+    document.getElementById('channels').innerHTML = "";
+    document.getElementById('links').innerHTML = "";
+
+    data[group].forEach(sub=>{
+        let btn=document.createElement("button");
+        btn.innerText=sub.name;
+        btn.onclick=()=>showChannels(group,sub);
+        subjects.appendChild(btn);
+    });
+}
+
+function showChannels(group,sub){
+    channels.innerHTML="";
+    links.innerHTML="";
+
+    sub.channels.forEach(ch=>{
+        let btn=document.createElement("button");
+        btn.innerText=ch.name;
+        btn.onclick=()=>showLinks(ch);
+        channels.appendChild(btn);
+    });
+}
+
+function showLinks(ch){
+    links.innerHTML="";
+    ch.links.forEach(l=>{
+        let a=document.createElement("a");
+        a.href=l;
+        a.target="_blank";
+        a.innerText=l;
+        links.appendChild(a);
+        links.appendChild(document.createElement("br"));
+    });
+}
+
+window.onload=function(){
+    for(let g in data){
+        let btn=document.createElement("button");
+        btn.innerText=g;
+        btn.onclick=()=>showSubjects(g);
+        groups.appendChild(btn);
+    }
+}
+</script>
+
+</body>
+</html>
