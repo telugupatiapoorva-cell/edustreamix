@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EduStreamix - Focus Learning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>EduStreamix</h1>
+    <p>Focused Learning Environment</p>
+    <button onclick="checkBrowser()">Enter Learning Mode</button>
+  </div>
+
+  <script>
+
+    function checkBrowser(){
+         /**
+       * check which browser user has opened
+       * If browser is edge then ask user to install particular extension related to that browser
+       * then if extension is installed navigate to youtube link
+       **/
+      alert('download this xyz extension')
+      // openSubscriptions()       
+
+    }
+
+    function openSubscriptions() {
+     
+      window.location.href = "https://www.youtube.com/feed/subscriptions";
+    }
+  </script>
+
+</body>
+</html>
