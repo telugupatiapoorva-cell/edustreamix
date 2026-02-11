@@ -1,0 +1,83 @@
+script.js
+
+// Video Database (Replace IDs with your selected videos)
+
+const videoData = {
+
+    solar: {
+        title: "Solar Energy",
+        videos: [
+            "9No-FiEInLA",   // Sample ID
+            "QnPZ9wUOocY",
+            "sM9dP0q5f5k"
+        ]
+    },
+
+    geo: {
+        title: "Geophysics",
+        videos: [
+            "x7dN9b9zKZQ",
+            "1P9yMq6PZGU",
+            "W4mP0l5ZzKs"
+        ]
+    },
+
+    ai: {
+        title: "Artificial Intelligence Basics",
+        videos: [
+            "ad79nYk2keg",
+            "JMUxmLyrhSk",
+            "2ePf9rue1Ao"
+        ]
+    },
+
+    entre: {
+        title: "Entrepreneurship",
+        videos: [
+            "kXYiU_JCYtU",
+            "3nQNiWdeH2Q",
+            "l482T0yNkeo"
+        ]
+    }
+
+};
+
+
+// Load Section Function
+
+function loadSection(sectionKey) {
+
+    const section = videoData[sectionKey];
+
+    if (!section) return;
+
+    // Hide welcome message
+    document.getElementById("welcome").style.display = "none";
+
+    // Show video section
+    document.getElementById("videoSection").style.display = "block";
+
+    // Set title
+    document.getElementById("sectionTitle").innerText = section.title;
+
+    // Clear old videos
+    const container = document.getElementById("videoContainer");
+    container.innerHTML = "";
+
+    // Add new videos
+    section.videos.forEach(id => {
+
+        const iframe = document.createElement("iframe");
+
+        iframe.src =
+            `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1`;
+
+        iframe.allow =
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+
+        iframe.allowFullscreen = true;
+
+        container.appendChild(iframe);
+
+    });
+}
