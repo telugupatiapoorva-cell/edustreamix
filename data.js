@@ -1,14 +1,27 @@
-const commonSubjects = [
+const data = {
+
+"B.Com General - Semester 6": [
 
 {
 name:"English",
 channels:[
-{name:"Part A",links:["https://youtube.com/playlist?list=plujxb7al70ib4mdwqipyrirrylnwjpu2d&si=8phgrnbp-fnohpk7"]},
-{name:"Part B",links:["https://youtube.com/playlist?list=plujxb7al70ibdke4oii4d40mycuq4jnq8&si=oh-fwjsijgc51ib7"]},
-{name:"Whole Subject",links:[
-"https://youtube.com/playlist?list=pljndhmbtsxpwayvg7o59hqscuykkhvz-y&si=oyqtupka4_ikqzyi",
-"https://youtube.com/playlist?list=plyjvm5gfnmy6rkpqkph7psuaobb44shws&si=fipxj6zwuoakyb6n",
-"https://youtube.com/playlist?list=plldwy7gu4r757w2-mkgfz7hdzdvhp-gkt&si=eebbghwtav4mhoas"
+{name:"Part A (English by Nisa)",links:[
+"https://www.youtube.com/playlist?list=PLUJXB7al70IB4mDWQIPyriRRylnwjPU2D"
+]},
+{name:"Part B (English by Nisa)",links:[
+"https://www.youtube.com/playlist?list=PLUJXB7al70IBdkE4oiI4d40mycUq4JnQ8"
+]},
+{name:"Whole Subject - Sara’s Learning Point",links:[
+"https://www.youtube.com/playlist?list=PLjNdhMBtsxpwAyVG7o59hqSCUYKKHvz-Y"
+]},
+{name:"Whole Subject - Dandu Venkatramulu",links:[
+"https://www.youtube.com/playlist?list=PLyjVm5GfnmY6rkPqkpH7psUaOBb44ShwS"
+]},
+{name:"Whole Subject - Educare",links:[
+"https://www.youtube.com/playlist?list=PLbBCm7TkLCKJtzjewd_X4NrbTBd4eCy_M"
+]},
+{name:"Whole Subject - PCV English",links:[
+"https://www.youtube.com/playlist?list=PLldWy7gu4R757w2-mkgFz7HDzDVhp-GkT"
 ]}
 ]
 },
@@ -16,53 +29,71 @@ channels:[
 {
 name:"Telugu",
 channels:[
-{name:"Whole Subject",links:[
-"https://youtube.com/playlist?list=plyjvm5gfnmy6uua5iln-gqnpkw7y1cemh&si=rdh0wzkud8f6dnua",
-"https://youtube.com/playlist?list=pl7nokdjp4zrkvkwtolt6edyqabvc-zjni&si=ieimcfyaqrcdeclh"
+{name:"Dandu Venkatramulu",links:[
+"https://www.youtube.com/playlist?list=PLyjVm5GfnmY6UUa5iLn-GQNPkW7y1CeMh"
 ]},
-{name:"Short Revision",links:["https://youtube.com/playlist?list=plbjrd3cfcesrmenf5fltuoxug3kjjdppx&si=-eswtlfzmzvlt6sj"]}
+{name:"Matrubhasha",links:[
+"https://www.youtube.com/playlist?list=PL7noKDJp4ZRKVkWtOlT6edyqABvC-zjNI"
+]}
 ]
 },
 
 {
 name:"Hindi",
 channels:[
-{name:"Whole Subject",links:["https://youtube.com/playlist?list=plstbuofp6ehdnt2reau2eaprgmdw6bzra&si=yz2i_uoylfasx8wy"]}
+{name:"Disha Hindi Classes",links:[
+"https://www.youtube.com/playlist?list=PLsTBUOfP6EhdnT2rEau2eaprGMdw6BZra"
+]}
 ]
 },
 
 {
 name:"Sanskrit",
 channels:[
-{name:"Whole Subject",links:[
-"https://youtube.com/playlist?list=plyjvm5gfnmy7ynznz0neh3lcgai1obzhh&si=loiayfkigrhnsmhu",
-"https://youtube.com/playlist?list=plc1q__0qogaoauv-llipynqpatmye_7kj&si=_7d_msv4c2jqih19"
-]}	
+{name:"Dandu Venkatramulu",links:[
+"https://www.youtube.com/playlist?list=PLyjVm5GfnmY7ynZnZ0neH3LcGAi1oBzHh"
+]},
+{name:"My Teaching Talkies",links:[
+"https://www.youtube.com/playlist?list=PLc1Q__0qOGAoAuv-LLipyNqpatmyE_7KJ"
+]},
+{name:"Dr. Pusapati Ravikantha Reddy",links:[
+"https://www.youtube.com/playlist?list=PLiOV0508aWZti2c9x-V-WxJCmGLW2EN3e"
+]}
 ]
 },
 
 {
 name:"Cost Control and Management Accounting",
 channels:[
-{name:"Whole Subject",links:["Https://Youtube.Com/Playlist?List=Pllhsiffdzcuvabugimvqfx1ovgzfhbpec&Si=Kngahxohhlsrvbgd"]},
-{name:"Part 1",links:["Https://Youtube.Com/Playlist?List=Plwjdzvupkxallmgp19jfhnenudgoy1g2v&Si=Rznoqj450u2a1utd"]},
-{name:"Part 2",links:["Https://Youtube.Com/Playlist?List=Plwjdzvupkxalg4vne3zhb7uvp9jwl6mog&Si=Q-W4d1m7q0i3_3oh"]}
+{name:"Hasham Ali Khan - Part 1",links:[
+"https://www.youtube.com/playlist?list=PLWJDzVuPkXAllmGP19jfhneNUdgOy1g2v"
+]},
+{name:"Hasham Ali Khan - Part 2",links:[
+"https://www.youtube.com/playlist?list=PLWJDzVuPkXAlg4vnE3ZhB7UVp9JWl6Mog"
+]},
+{name:"Devika’s Commerce - Whole Subject",links:[
+"https://www.youtube.com/playlist?list=PLLhSIFfDZcUVaBuGIMvQFx1OVGzfhbPeC"
+]}
 ]
 },
 
 {
 name:"Theory and Practice of GST",
 channels:[
-{name:"Whole Subject",links:["Https://Youtube.Com/Playlist?List=Plwjdzvupkxaknpdaiqufc2jxdoxjenrsj&Si=Wvl4inxhtawnbqfi"]}
+{name:"Hasham Ali Khan - Whole Subject",links:[
+"https://www.youtube.com/playlist?list=PLWJDzVuPkXAkNpdAIqufc2JxDoxjENrsj"
+]}
 ]
 },
 
 {
 name:"Accounting Standards",
 channels:[
-{name:"Whole Subject",links:[
-"https://youtube.com/playlist?list=PLLhSIFfDZcUXO81uWFy_F6O4ZX0JfTYkV&si=sveBQraIQh_mg749",
-"https://youtube.com/playlist?list=PLWJDzVuPkXAmAI6CfaLfYpQVvQFhXzxC6&si=THNBbXF7EUDDW2as"
+{name:"Devika’s Commerce",links:[
+"https://www.youtube.com/playlist?list=PLLhSIFfDZcUXO81uWFy_F6O4ZX0JfTYkV"
+]},
+{name:"Hasham Ali Khan",links:[
+"https://www.youtube.com/playlist?list=PLWJDzVuPkXAmAI6CfaLfYpQVvQFhXzxC6"
 ]}
 ]
 },
@@ -70,40 +101,60 @@ channels:[
 {
 name:"Research Methodology & Project",
 channels:[
-{name:"Whole Subject",links:[
-"https://youtube.com/playlist?list=pllhsiffdzcuwrlgixmkd1rnelsz1you4o&si=u6bc6ow1d7eoi3g3",
-"https://youtube.com/playlist?list=PLk3poRqYftlhDGto5oSxeNeFWHzajbVuA&si=3MwDnvSrUd3EVlXN",
-"https://youtube.com/playlist?list=PLjMjkIR4-dvIAvboLjtq6sSi_1_wk2VgD&si=vLv1v5kmXAh1_pnU"
+{name:"Devika’s Commerce",links:[
+"https://www.youtube.com/playlist?list=PLLhSIFfDZcUWRlgiXMkd1rNeLSz1You4O"
+]},
+{name:"Lakshya Commerce",links:[
+"https://www.youtube.com/playlist?list=PLjMjkIR4-dvIAvboLjtq6sSi_1_wk2VgD"
+]},
+{name:"Pooja Singh",links:[
+"https://www.youtube.com/playlist?list=PLk3poRqYftlhDGto5oSxeNeFWHzajbVuA"
 ]}
 ]
 }
 
-];
+],
 
-const data = {
+/* ================= B.COM HONORS ================= */
 
-"BCom General - Semester 6": commonSubjects,
+"B.Com Honors - Semester 6": [
 
-"BCom Honors - Semester 6": [
-...commonSubjects,
+...this["B.Com General - Semester 6"],
+
 {
 name:"International Finance",
 channels:[
-{name:"Whole Subject",links:["https://youtube.com/playlist?list=PLWJDzVuPkXAnNpRjN6InK65R7ndvpYZUf&si=EDV35BDJUJIhuLgc"]}
+{name:"Hasham Ali Khan",links:[
+"https://www.youtube.com/playlist?list=PLWJDzVuPkXAnNpRjN6InK65R7ndvpYZUf"
+]}
 ]
 }
+
 ],
 
-"BCom Computer Applications - Semester 6":[
-...commonSubjects,
+/* ============= B.COM COMPUTER APPLICATIONS ============= */
+
+"B.Com Computer Applications - Semester 6": [
+
+...this["B.Com General - Semester 6"],
+
 {
 name:"Cybersecurity",
 channels:[
-{name:"Whole Subject",links:["https://youtube.com/playlist?list=PLtfg0YD2YYUQMZp4bRkeZI0JXWHGqh8vo&si=uQhVzmPNV1kv5LtJ"]}
+{name:"Whole Subject",links:[
+"https://www.youtube.com/playlist?list=PLtfg0YD2YYUQMZp4bRkeZI0JXWHGqh8vo"
+]}
 ]
 }
+
 ],
 
-"BCom Business Analytics - Semester 6": commonSubjects
+/* ============= B.COM BUSINESS ANALYTICS ============= */
+
+"B.Com Business Analytics - Semester 6": [
+
+...this["B.Com General - Semester 6"]
+
+]
 
 };
