@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>EDUSTREAMIX | B.Com</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Professional Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- SPLASH SCREEN -->
+<div id="splash">
+    <div class="splash-content">
+        <img src="otbi.png" class="splash-logo left-logo">
+        <h1>EDUSTREAMIX</h1>
+        <p>Smart B.Com Learning Platform</p>
+        <img src="osmania.png" class="splash-logo right-logo">
+    </div>
+</div>
+
+<div class="app-container">
+
+<header class="app-header">
+<h1>EDUSTREAMIX</h1>
+<p>Smart B.Com Learning</p>
+</header>
+
+<div id="groups" class="screen active"></div>
+<div id="subjects" class="screen"></div>
+<div id="channels" class="screen"></div>
+<div id="links" class="screen"></div>
+
+</div>
+
+<script src="data.js"></script>
+
+<script>
+
+const groupsDiv = document.getElementById("groups");
+const subjectsDiv = document.getElementById("subjects");
+const channelsDiv = document.getElementById("channels");
+const linksDiv = document.getElementById("links");
+
+const screens = document.querySelectorAll(".screen");
+
+function switchScreen(screen){
+    screens.forEach(s=>{
+        s.classList.remove("active");
+    });
+    screen.classList.add("active");
+}
+
+function createBackButton(previousScreen){
+    let btn = document.createElement("button");
+    btn.className = "back-btn";
+    btn.innerText = "← Back";
+    btn.onclick = ()=>switchScreen(previousScreen);
+    return btn;
+}
+
+function createCard(text, icon, clickFn){
+    let card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+        <div class="icon">${icon}</div>
+        <div class="title">${text}</div>
+    `;
+    card.onclick = clickFn;
+    return card;
+}
+
+function getSubjectIcon(name){
+    if(name.toLowerCase().includes("english")) return "📘";
+    if(name.toLowerCase().includes("telugu")) return "📗";
+    if(name.toLowerCase().includes("hindi")) return "📙";
+    if(name.toLowerCase().includes("sanskrit")) return "📕";
+    if(name.toLowerCase().includes("accounting")) return "📊";
+    if(name.toLowerCase().includes("gst")) return "💼";
+    if(name.toLowerCase().includes("research")) return "📝";
+    if(name.toLowerCase().includes("finance")) return "💰";
+    if(name.toLowerCase().includes("cyber")) return "🛡";
+    if(name.toLowerCase().includes("technology")) return "💻";
+    return "🎓";
+}
+
+function showSubjects(group){
+    subjectsDiv.innerHTML = "<h2>Select Subject</h2>";
+    data[group].forEach(sub=>{
+        subjectsDiv.appendChild(
+            createCard(sub.name, getSubjectIcon(sub.name), ()=>showChannels(sub))
+        );
+    });
+    subjectsDiv.appendChild(createBackButton(groupsDiv));
+    switchScreen(subjectsDiv);
+}
+
+function showChannels(subject){
+    channelsDiv.innerHTML = "<h2>Select Channel</h2>";
+    subject.channels.forEach(channel=>{
+        channelsDiv.appendChild(
+            createCard(channel.name, "📺", ()=>showLinks(channel))
+        );
+    });
+    channelsDiv.appendChild(createBackButton(subjectsDiv));
+    switchScreen(channelsDiv);
+}
+
+function showLinks(channel){
+    linksDiv.innerHTML = "<h2>Open YouTube Channel</h2>";
+    channel.links.forEach(link=>{
+        let a = document.createElement("a");
+        a.href = link;
+        a.target = "_blank";
+        a.className = "playlist-btn";
+        a.innerText = "▶ Watch on YouTube";
+        linksDiv.appendChild(a);
+    });
+    linksDiv.appendChild(createBackButton(channelsDiv));
+    switchScreen(linksDiv);
+}
+
+window.onload = function(){
+    groupsDiv.innerHTML = "<h2>Select Group</h2>";
+    for(let group in data){
+        groupsDiv.appendChild(
+            createCard(group, "🎓", ()=>showSubjects(group))
+        );
+    }
+
+    // Splash disappear
+    setTimeout(()=>{
+        document.getElementById("splash").style.display="none";
+    },2500);
+};
+
+</script>
+
+</body>
+</html>
